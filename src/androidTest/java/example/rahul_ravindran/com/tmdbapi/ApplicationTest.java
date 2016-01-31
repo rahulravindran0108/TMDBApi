@@ -1,4 +1,4 @@
-package example.rahul_ravindran.com.tmdbapi;
+package com.rahulravindran.tmdbapi;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package example.rahul_ravindran.com.tmdbapi.entitites;
+package com.rahulravindran.tmdbapi.entitites;
 
 import android.os.Parcel;
 import android.os.Parcelable;

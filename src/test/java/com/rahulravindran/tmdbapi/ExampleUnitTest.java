@@ -1,4 +1,4 @@
-package example.rahul_ravindran.com.tmdbapi;
+package com.rahulravindran.tmdbapi;
 
 import org.junit.Test;
 

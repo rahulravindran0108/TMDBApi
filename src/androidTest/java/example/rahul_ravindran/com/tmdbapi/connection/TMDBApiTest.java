@@ -1,6 +1,5 @@
-package example.rahul_ravindran.com.tmdbapi.connection;
+package com.rahulravindran.tmdbapi.connection;
 
-import android.util.Log;
 
 import com.squareup.okhttp.Dispatcher;
 import com.squareup.okhttp.OkHttpClient;
@@ -13,27 +12,19 @@ import java.util.List;
 import java.util.concurrent.AbstractExecutorService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
-
-import example.rahul_ravindran.com.tmdbapi.entitites.Genres;
-import example.rahul_ravindran.com.tmdbapi.entitites.MovieDB;
-import example.rahul_ravindran.com.tmdbapi.entitites.Sort;
+import com.rahulravindran.tmdbapi.entitites.Genres;
+import com.rahulravindran.tmdbapi.entitites.MovieDB;
+import com.rahulravindran.tmdbapi.entitites.Sort;
 import junitx.util.PrivateAccessor;
 import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
-import rx.functions.Func1;
-import rx.observers.TestSubscriber;
-import rx.schedulers.Schedulers;
 
-/**
- * Created by rahulravindran on 30/01/16.
- */
+
 public class TMDBApiTest {
-    private MockWebServer mockServer;
     private TMDBApi tmdbAPI;
     private List<MovieDB> movies;
     private List<Genres> genres;
-    private static String API_KEY = "####";
+    private static String API_KEY = "fff1e40cbc36f1d068ac939ea21bf343";
 
 
     @Before
@@ -61,7 +52,7 @@ public class TMDBApiTest {
     @Test
     public void testDiscoverMovies() {
 
-        Observable<MovieDB.Response> movies = tmdbAPI.discoverMovies(API_KEY, Sort.popularity, 1)
+        Observable<MovieDB.Response> movies = tmdbAPI.discoverMovies(Sort.popularity, 1)
                 .subscribeOn(Schedulers.immediate());
 
         movies.subscribe(new Action1<MovieDB.Response>() {
@@ -78,7 +69,7 @@ public class TMDBApiTest {
     @Test
     public void getGenres() {
         Observable<Genres.Response> genres =
-                    tmdbAPI.getGenres(API_KEY).subscribeOn(Schedulers.immediate());
+                tmdbAPI.getGenres().subscribeOn(Schedulers.immediate());
 
         genres.subscribe(new Action1<Genres.Response>() {
             @Override
