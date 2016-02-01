@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.Response;
 import java.io.IOException;
-
 import com.rahulravindran.tmdbapi.exceptions.exception.AuthenticationFailed;
 import com.rahulravindran.tmdbapi.exceptions.exception.DeviceDenied;
 import com.rahulravindran.tmdbapi.exceptions.exception.DuplicateEntry;

@@ -2,6 +2,36 @@
 
 The movies DB API Android Library Module. This repository contains an Android Module for ingesting data from TheMoviesDB. This module was part of the Popular Movie Application that I had made for Android Nanodegree Program.
 
+This library requires Android 2.3 and uses java 7
+
+## Installation
+
+Using Gradle:
+```
+repositories {
+        jcenter()
+}
+
+dependencies {
+    ...
+    compile 'com.rahulravindran:tmdbapi:0.1.1'
+}
+```
+
+## Common issues
+
+One of the common issues is duplication of Licence/Notice file due to one of the dependencies. Here is a quick fix for it:
+
+```
+android {
+    ...
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+```
+
 ## Usage
 
 ### Basic usage
