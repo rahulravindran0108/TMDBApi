@@ -49,7 +49,7 @@ genres.subscribe(new Action1<Genres.Response>() {
 });
 ```
 
-### Video
+### Video   
 
 This api also gives call to the video endpoint in order to get the video of a specific movie
 
